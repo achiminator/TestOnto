@@ -5,11 +5,8 @@
      xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
      xmlns:xml="http://www.w3.org/XML/1998/namespace"
      xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
-     xmlns:prov="http://www.w3.org/ns/prov#"
-     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
-     xmlns:terms="http://purl.org/dc/terms/">
+     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#">
     <owl:Ontology rdf:about="http://www.semanticweb.org/achim/ontologies/2021/10/untitled-ontology-287">
-        <owl:imports rdf:resource="http://example.org/mmd/matlprop/mp-prop"/>
         <rdfs:comment>General Annotation Test</rdfs:comment>
     </owl:Ontology>
     
@@ -68,13 +65,6 @@
     <owl:Class rdf:about="http://www.semanticweb.org/achim/ontologies/2021/10/untitled-ontology-287#A"/>
     
 
-
-    <!-- http://www.semanticweb.org/achim/ontologies/2021/10/untitled-ontology-287#C -->
-
-    <owl:Class rdf:about="http://www.semanticweb.org/achim/ontologies/2021/10/untitled-ontology-287#C"/>
-    
-
-
     <!-- http://www.semanticweb.org/achim/ontologies/2021/10/untitled-ontology-287#tessa -->
 
     <owl:Class rdf:about="http://www.semanticweb.org/achim/ontologies/2021/10/untitled-ontology-287#tessa"/>
@@ -83,7 +73,9 @@
 
     <!-- http://www.semanticweb.org/achim/ontologies/2021/10/untitled-ontology-287#tossa -->
 
-    <owl:Class rdf:about="http://www.semanticweb.org/achim/ontologies/2021/10/untitled-ontology-287#tossa"/>
+    <owl:Class rdf:about="http://www.semanticweb.org/achim/ontologies/2021/10/untitled-ontology-287#tossa">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/achim/ontologies/2021/10/untitled-ontology-287#C"/>
+    </owl:Class>
 </rdf:RDF>
 
 
