@@ -38,6 +38,15 @@
     
 
 
+    <!-- http://www.semanticweb.org/achim/ontologies/2021/10/untitled-ontology-287#isLoved -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/achim/ontologies/2021/10/untitled-ontology-287#isLoved">
+        <owl:inverseOf rdf:resource="http://www.semanticweb.org/achim/ontologies/2021/10/untitled-ontology-287#loves"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#InverseFunctionalProperty"/>
+    </owl:ObjectProperty>
+    
+
+
     <!-- http://www.semanticweb.org/achim/ontologies/2021/10/untitled-ontology-287#loves -->
 
     <owl:ObjectProperty rdf:about="http://www.semanticweb.org/achim/ontologies/2021/10/untitled-ontology-287#loves">
@@ -60,7 +69,10 @@
 
     <!-- http://www.semanticweb.org/achim/ontologies/2021/10/untitled-ontology-287#inLove -->
 
-    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/achim/ontologies/2021/10/untitled-ontology-287#inLove"/>
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/achim/ontologies/2021/10/untitled-ontology-287#inLove">
+        <rdfs:domain rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#boolean"/>
+    </owl:DatatypeProperty>
     
 
 
@@ -78,22 +90,10 @@
     <!-- http://www.semanticweb.org/achim/ontologies/2021/10/untitled-ontology-287#A -->
 
     <owl:Class rdf:about="http://www.semanticweb.org/achim/ontologies/2021/10/untitled-ontology-287#A">
-        <owl:equivalentClass>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="http://www.semanticweb.org/achim/ontologies/2021/10/untitled-ontology-287#inLove"/>
-                <owl:someValuesFrom rdf:resource="http://www.w3.org/2001/XMLSchema#boolean"/>
-            </owl:Restriction>
-        </owl:equivalentClass>
         <rdfs:subClassOf>
             <owl:Restriction>
                 <owl:onProperty rdf:resource="http://www.semanticweb.org/achim/ontologies/2021/10/untitled-ontology-287#loves"/>
                 <owl:allValuesFrom rdf:resource="http://www.semanticweb.org/achim/ontologies/2021/10/untitled-ontology-287#A"/>
-            </owl:Restriction>
-        </rdfs:subClassOf>
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="http://www.semanticweb.org/achim/ontologies/2021/10/untitled-ontology-287#hasLovers"/>
-                <owl:maxCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">4</owl:maxCardinality>
             </owl:Restriction>
         </rdfs:subClassOf>
         <rdfs:subClassOf>
@@ -117,6 +117,12 @@
         </rdfs:subClassOf>
         <rdfs:comment>Some Annotation</rdfs:comment>
     </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/achim/ontologies/2021/10/untitled-ontology-287#C -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/achim/ontologies/2021/10/untitled-ontology-287#C"/>
 </rdf:RDF>
 
 
