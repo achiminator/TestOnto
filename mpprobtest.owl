@@ -67,7 +67,7 @@
 
     <!-- http://www.w3.org/ns/prov#wasAttributedTo -->
 
-    <owl:AnnotationProperty rdf:about="http://www.w3.org/ns/prov#wasAttributedTo"/>
+    <owl:AnnotationProperty rdf:about="http://www.w3.org/ns/prov#butedTo"/>
     
 
 
@@ -274,8 +274,6 @@
                 <owl:someValuesFrom rdf:resource="http://example.org/mmd/matlprop/mp-prop#MaterialsPropertyAssertionWithAuthority"/>
             </owl:Restriction>
         </rdfs:subClassOf>
-        <prov:wasAttributedTo rdf:resource="http://www.w3.org/ns/prov#Agent"/>
-        <prov:wasDerivedFrom rdf:resource="http://www.w3.org/ns/prov#Entity"/>
     </owl:Class>
     
 
