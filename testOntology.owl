@@ -32,6 +32,23 @@
     <!-- 
     ///////////////////////////////////////////////////////////////////////////////////////
     //
+    // Data properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.semanticweb.org/achim/ontologies/2021/10/untitled-ontology-287#inLove -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/achim/ontologies/2021/10/untitled-ontology-287#inLove"/>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
     // Classes
     //
     ///////////////////////////////////////////////////////////////////////////////////////
@@ -42,7 +59,20 @@
 
     <!-- http://www.semanticweb.org/achim/ontologies/2021/10/untitled-ontology-287#A -->
 
-    <owl:Class rdf:about="http://www.semanticweb.org/achim/ontologies/2021/10/untitled-ontology-287#A"/>
+    <owl:Class rdf:about="http://www.semanticweb.org/achim/ontologies/2021/10/untitled-ontology-287#A">
+        <owl:equivalentClass>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/achim/ontologies/2021/10/untitled-ontology-287#inLove"/>
+                <owl:someValuesFrom rdf:resource="http://www.w3.org/2001/XMLSchema#boolean"/>
+            </owl:Restriction>
+        </owl:equivalentClass>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/achim/ontologies/2021/10/untitled-ontology-287#loves"/>
+                <owl:allValuesFrom rdf:resource="http://www.semanticweb.org/achim/ontologies/2021/10/untitled-ontology-287#A"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
     
 
 
