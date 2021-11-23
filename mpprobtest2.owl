@@ -315,15 +315,7 @@
     <!-- http://example.org/mmd/matlprop/mp-prop#MaterialsPropertyCollection -->
 
     <owl:Class rdf:about="http://example.org/mmd/matlprop/mp-prop#MaterialsPropertyCollection"/>
-    
-
-
-    <!-- http://example.org/mmd/matlprop/mp-prop#MaterialsPropertyDescriptor -->
-
-    <owl:Class rdf:about="http://example.org/mmd/matlprop/mp-prop#MaterialsPropertyDescriptor">
-        <rdfs:subClassOf rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
-    </owl:Class>
-    
+      
 
 
     <!-- http://example.org/mmd/matlprop/mp-prop#MaterialsPropertyQuantity -->
