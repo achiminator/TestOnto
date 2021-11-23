@@ -13,6 +13,25 @@
     <!-- 
     ///////////////////////////////////////////////////////////////////////////////////////
     //
+    // Object Properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.semanticweb.org/achim/ontologies/2021/10/untitled-ontology-287#loves -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/achim/ontologies/2021/10/untitled-ontology-287#loves">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topObjectProperty"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
     // Classes
     //
     ///////////////////////////////////////////////////////////////////////////////////////
@@ -30,6 +49,12 @@
     <!-- http://www.semanticweb.org/achim/ontologies/2021/10/untitled-ontology-287#B -->
 
     <owl:Class rdf:about="http://www.semanticweb.org/achim/ontologies/2021/10/untitled-ontology-287#B">
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/achim/ontologies/2021/10/untitled-ontology-287#loves"/>
+                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/achim/ontologies/2021/10/untitled-ontology-287#A"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
         <rdfs:comment>Some Annotation</rdfs:comment>
     </owl:Class>
 </rdf:RDF>
