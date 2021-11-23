@@ -27,6 +27,13 @@
 
     <owl:ObjectProperty rdf:about="http://www.semanticweb.org/achim/ontologies/2021/10/untitled-ontology-287#hasLovers">
         <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topObjectProperty"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+        <rdfs:range>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/achim/ontologies/2021/10/untitled-ontology-287#inLove"/>
+                <owl:someValuesFrom rdf:resource="http://www.w3.org/2002/07/owl#rational"/>
+            </owl:Restriction>
+        </rdfs:range>
     </owl:ObjectProperty>
     
 
@@ -35,6 +42,7 @@
 
     <owl:ObjectProperty rdf:about="http://www.semanticweb.org/achim/ontologies/2021/10/untitled-ontology-287#loves">
         <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topObjectProperty"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ReflexiveProperty"/>
     </owl:ObjectProperty>
     
 
