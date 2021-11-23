@@ -29,17 +29,9 @@
     
 
 
-    <!-- http://www.semanticweb.org/achim/ontologies/2021/10/untitled-ontology-287#isLoved -->
-
-    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/achim/ontologies/2021/10/untitled-ontology-287#isLoved"/>
-    
-
-
     <!-- http://www.semanticweb.org/achim/ontologies/2021/10/untitled-ontology-287#loves -->
 
-    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/achim/ontologies/2021/10/untitled-ontology-287#loves">
-        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topObjectProperty"/>
-    </owl:ObjectProperty>
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/achim/ontologies/2021/10/untitled-ontology-287#loves"/>
     
 
 
