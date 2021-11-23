@@ -308,14 +308,6 @@
 
     <owl:Class rdf:about="http://example.org/mmd/matlprop/mp-prop#MaterialsPropertyAuthority">
         <rdfs:subClassOf rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
-        <rdfs:subClassOf>
-            <owl:Class>
-                <owl:unionOf rdf:parseType="Collection">
-                    <rdf:Description rdf:about="http://www.w3.org/ns/prov#Agent"/>
-                    <rdf:Description rdf:about="http://www.w3.org/ns/prov#Entity"/>
-                </owl:unionOf>
-            </owl:Class>
-        </rdfs:subClassOf>
     </owl:Class>
     
 
