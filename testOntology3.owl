@@ -65,6 +65,13 @@
     <owl:Class rdf:about="http://www.semanticweb.org/achim/ontologies/2021/10/untitled-ontology-287#A"/>
     
 
+
+    <!-- http://www.semanticweb.org/achim/ontologies/2021/10/untitled-ontology-287#C -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/achim/ontologies/2021/10/untitled-ontology-287#C"/>
+    
+
+
     <!-- http://www.semanticweb.org/achim/ontologies/2021/10/untitled-ontology-287#tessa -->
 
     <owl:Class rdf:about="http://www.semanticweb.org/achim/ontologies/2021/10/untitled-ontology-287#tessa"/>
