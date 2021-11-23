@@ -41,7 +41,6 @@
     <!-- http://www.semanticweb.org/achim/ontologies/2021/10/untitled-ontology-287#isLoved -->
 
     <owl:ObjectProperty rdf:about="http://www.semanticweb.org/achim/ontologies/2021/10/untitled-ontology-287#isLoved">
-        <owl:inverseOf rdf:resource="http://www.semanticweb.org/achim/ontologies/2021/10/untitled-ontology-287#loves"/>
         <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#InverseFunctionalProperty"/>
     </owl:ObjectProperty>
     
