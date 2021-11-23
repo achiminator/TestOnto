@@ -331,13 +331,6 @@
     <owl:Class rdf:about="http://example.org/mmd/matlprop/mp-prop#MaterialsPropertyQuantity"/>
     
 
-
-    <!-- http://www.w3.org/ns/prov#Agent -->
-
-    <owl:Class rdf:about="http://www.w3.org/ns/prov#Agent"/>
-    
-
-
     <!-- http://www.w3.org/ns/prov#Entity -->
 
     <owl:Class rdf:about="http://www.w3.org/ns/prov#Entity"/>
