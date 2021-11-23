@@ -66,14 +66,6 @@
     
 
 
-    <!-- http://www.semanticweb.org/achim/ontologies/2021/10/untitled-ontology-287#B -->
-
-    <owl:Class rdf:about="http://www.semanticweb.org/achim/ontologies/2021/10/untitled-ontology-287#B">
-        <rdfs:comment>Some Annotation</rdfs:comment>
-    </owl:Class>
-    
-
-
     <!-- http://www.semanticweb.org/achim/ontologies/2021/10/untitled-ontology-287#C -->
 
     <owl:Class rdf:about="http://www.semanticweb.org/achim/ontologies/2021/10/untitled-ontology-287#C"/>
