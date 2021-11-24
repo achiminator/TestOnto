@@ -177,7 +177,8 @@
     <!-- http://example.org/mmd/matlprop/mp-prop#hasMaterialsPropertyDescription -->
 
     <owl:DatatypeProperty rdf:about="http://example.org/mmd/matlprop/mp-prop#hasMaterialsPropertyDescription">
-
+        <rdfs:domain rdf:resource="http://example.org/mmd/matlprop/mp-prop#MaterialsProperty"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
     </owl:DatatypeProperty>
     
 
@@ -194,8 +195,7 @@
 
 
     <!-- http://example.org/mmd/matlprop/mp-cond#Condition -->
-        <rdfs:domain rdf:resource="http://example.org/mmd/matlprop/mp-prop#MaterialsProperty"/>
-        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+
     <owl:Class rdf:about="http://example.org/mmd/matlprop/mp-cond#Condition"/>
     
 
