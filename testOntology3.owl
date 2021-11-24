@@ -70,13 +70,14 @@
         <rdfs:subClassOf>
             <owl:Restriction>
                 <owl:onProperty rdf:resource="http://www.semanticweb.org/achim/ontologies/2021/10/untitled-ontology-287#hasLovers"/>
-                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/achim/ontologies/2021/10/untitled-ontology-287#A"/>
-            </owl:Restriction>
-        </rdfs:subClassOf>
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="http://www.semanticweb.org/achim/ontologies/2021/10/untitled-ontology-287#hasLovers"/>
-                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/achim/ontologies/2021/10/untitled-ontology-287#tessa"/>
+                <owl:someValuesFrom>
+                    <owl:Class>
+                        <owl:unionOf rdf:parseType="Collection">
+                            <rdf:Description rdf:about="http://www.semanticweb.org/achim/ontologies/2021/10/untitled-ontology-287#A"/>
+                            <rdf:Description rdf:about="http://www.semanticweb.org/achim/ontologies/2021/10/untitled-ontology-287#tessa"/>
+                        </owl:unionOf>
+                    </owl:Class>
+                </owl:someValuesFrom>
             </owl:Restriction>
         </rdfs:subClassOf>
     </owl:Class>
