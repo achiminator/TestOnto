@@ -23,6 +23,14 @@
     
 
 
+    <!-- http://www.semanticweb.org/achim/ontologies/2021/10/untitled-ontology-287#hasLovers -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/achim/ontologies/2021/10/untitled-ontology-287#hasLovers">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#SymmetricProperty"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/achim/ontologies/2021/10/untitled-ontology-287#A"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/achim/ontologies/2021/10/untitled-ontology-287#tessa"/>
+    </owl:ObjectProperty>
+    
 
 
     <!-- 
@@ -35,6 +43,14 @@
 
     
 
+
+    <!-- http://www.semanticweb.org/achim/ontologies/2021/10/untitled-ontology-287#inLove -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/achim/ontologies/2021/10/untitled-ontology-287#inLove">
+        <rdfs:domain rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#boolean"/>
+    </owl:DatatypeProperty>
+    
 
 
     <!-- 
@@ -58,7 +74,6 @@
             </owl:Restriction>
         </rdfs:subClassOf>
     </owl:Class>
-    
     
 
 
