@@ -151,7 +151,7 @@
 
     <owl:ObjectProperty rdf:about="http://example.org/mmd/matlprop/mp-prop#hasMaterialsPropertyQuantity">
         <rdfs:domain rdf:resource="http://example.org/mmd/matlprop/mp-prop#MaterialsProperty"/>
-        <rdfs:range rdf:resource="http://example.org/mmd/matlprop/mp-prop#MaterialsPropertyQuantity"/>
+        <rdfs:range rdf:resource="http://example.org/mmd/matlprop/mp-prop#MaterialsPropertyDescriptor"/>
     </owl:ObjectProperty>
     
 
