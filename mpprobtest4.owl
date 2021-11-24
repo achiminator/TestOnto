@@ -277,30 +277,6 @@
     </owl:Class>
     
 
-
-    <!-- http://example.org/mmd/matlprop/mp-prop#MaterialsPropertyAssertionWithAuthority -->
-
-    <owl:Class rdf:about="http://example.org/mmd/matlprop/mp-prop#MaterialsPropertyAssertionWithAuthority">
-        <rdfs:subClassOf rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="http://example.org/mmd/matlprop/mp-prop#hasMaterialsPropertyAssertion"/>
-                <owl:someValuesFrom rdf:resource="http://example.org/mmd/matlprop/mp-prop#MaterialsPropertyAssertion"/>
-            </owl:Restriction>
-        </rdfs:subClassOf>
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="http://example.org/mmd/matlprop/mp-prop#hasMaterialsPropertyAuthority"/>
-                <owl:someValuesFrom rdf:resource="http://example.org/mmd/matlprop/mp-prop#MaterialsPropertyAuthority"/>
-            </owl:Restriction>
-        </rdfs:subClassOf>
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="http://example.org/mmd/matlprop/mp-prop#materialsPropertyAssertionWithAuthorityOf"/>
-                <owl:someValuesFrom rdf:resource="http://example.org/mmd/matlprop/mp-prop#Material"/>
-            </owl:Restriction>
-        </rdfs:subClassOf>
-    </owl:Class>
     
 
 
