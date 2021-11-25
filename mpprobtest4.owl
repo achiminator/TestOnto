@@ -98,7 +98,7 @@
 
     <owl:ObjectProperty rdf:about="http://example.org/mmd/matlprop/mp-prop#hasMaterialsPropertyDescriptor">
         <rdfs:domain rdf:resource="http://example.org/mmd/matlprop/mp-prop#MaterialsPropertyAssertion"/>
-        <rdfs:range rdf:resource="http://example.org/mmd/matlprop/mp-prop#MaterialsProperty"/>
+        <rdfs:range rdf:resource="http://www.w3.org/ns/prov#Entity"/>
     </owl:ObjectProperty>
     
 
@@ -106,7 +106,7 @@
     <!-- http://example.org/mmd/matlprop/mp-prop#hasMaterialsPropertyQuantity -->
 
     <owl:ObjectProperty rdf:about="http://example.org/mmd/matlprop/mp-prop#hasMaterialsPropertyQuantity">
-        <rdfs:domain rdf:resource="http://example.org/mmd/matlprop/mp-prop#MaterialsPropertyAssertion"/>
+        <rdfs:domain rdf:resource="http://www.w3.org/ns/prov#Entity"/>
         <rdfs:range rdf:resource="http://example.org/mmd/matlprop/mp-prop#MaterialsProperty"/>
     </owl:ObjectProperty>
     
