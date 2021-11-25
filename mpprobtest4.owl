@@ -106,7 +106,7 @@
     <!-- http://example.org/mmd/matlprop/mp-prop#hasMaterialsPropertyQuantity -->
 
     <owl:ObjectProperty rdf:about="http://example.org/mmd/matlprop/mp-prop#hasMaterialsPropertyQuantity">
-        <rdfs:domain rdf:resource="http://www.w3.org/ns/prov#Entity"/>
+        <rdfs:domain rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
         <rdfs:range rdf:resource="http://example.org/mmd/matlprop/mp-prop#MaterialsProperty"/>
     </owl:ObjectProperty>
     
