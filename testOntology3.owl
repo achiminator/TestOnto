@@ -82,12 +82,6 @@
     
 
 
-    <!-- http://www.semanticweb.org/achim/ontologies/2021/10/untitled-ontology-287#tessa -->
-
-    <owl:Class rdf:about="http://www.semanticweb.org/achim/ontologies/2021/10/untitled-ontology-287#tessa"/>
-    
-
-
     <!-- http://www.semanticweb.org/achim/ontologies/2021/10/untitled-ontology-287#tossa -->
 
     <owl:Class rdf:about="http://www.semanticweb.org/achim/ontologies/2021/10/untitled-ontology-287#tossa">
