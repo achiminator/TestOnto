@@ -23,9 +23,7 @@
 
     <!-- http://www.semanticweb.org/achim/ontologies/2022/5/untitled-ontology-343#asdf -->
 
-    <owl:Class rdf:about="http://www.semanticweb.org/achim/ontologies/2022/5/untitled-ontology-343#asdf">
-        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/achim/ontologies/2022/5/untitled-ontology-343#test"/>
-    </owl:Class>
+
     
 
 
