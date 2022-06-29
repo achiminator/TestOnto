@@ -76,12 +76,6 @@
     
 
 
-    <!-- http://www.semanticweb.org/achim/ontologies/2021/10/untitled-ontology-287#C -->
-
-    <owl:Class rdf:about="http://www.semanticweb.org/achim/ontologies/2021/10/untitled-ontology-287#C"/>
-    
-
-
     <!-- http://www.semanticweb.org/achim/ontologies/2021/10/untitled-ontology-287#tossa -->
 
     <owl:Class rdf:about="http://www.semanticweb.org/achim/ontologies/2021/10/untitled-ontology-287#tossa">
