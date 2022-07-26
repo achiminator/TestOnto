@@ -59,15 +59,6 @@
     
 
 
-    <!-- http://example.org/mmd/matlprop/mp-prop#hasMaterialsPropertyAuthority -->
-
-    <owl:ObjectProperty rdf:about="http://example.org/mmd/matlprop/mp-prop#hasMaterialsPropertyAuthority">
-        <rdfs:domain rdf:resource="http://example.org/mmd/matlprop/mp-prop#MaterialsPropertyAssertion"/>
-        <rdfs:range rdf:resource="http://example.org/mmd/matlprop/mp-prop#MaterialsProperty"/>
-    </owl:ObjectProperty>
-    
-
-
     <!-- http://example.org/mmd/matlprop/mp-prop#hasMaterialsPropertyCollection -->
 
     <owl:ObjectProperty rdf:about="http://example.org/mmd/matlprop/mp-prop#hasMaterialsPropertyCollection">
