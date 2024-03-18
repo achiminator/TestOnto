@@ -1,0 +1,205 @@
+
+ns1:ClassShape
+  rdf:type sh:NodeShape ;
+  rdfs:label "Class shape" ;
+  sh:class [
+      rdf:type owl:Class ;
+      owl:unionOf (
+          ns1:Apotheken
+          ns1:Baeckereien
+        ) ;
+    ] ;
+  sh:targetClass ns1:Baeckereien ;
+.
+
+ns1:Gaststaetten
+  rdf:type sh:NodeShape ;
+  dc:description "Dieser Datensatz umfasst die Standorte der Gaststätten in der Hanse- und Universitätsstadt Rostock mit Informationen zu Adresse, Art, Bezeichnung, Barrierefreiheit, Öffnungszeiten und Kontaktdaten. Die Ressourcen werden in der Regel im folgenden Zeitabstand aktualisiert: 365 Tage" ;
+  rdfs:seeAlso <https://geo.sv.rostock.de/download/opendata/gaststaetten/gaststaetten.json> ;
+  sh:deactivated "false"^^xsd:boolean ;
+  sh:property [
+      sh:path sh:zeroOrMorePath ;
+      sh:class ns1:Baeckereien ;
+      sh:maxCount 1 ;
+      sh:nodeKind sh:Literal ;
+    ] ;
+  sh:property [
+      sh:path ns1:barrierefrei ;
+      sh:maxCount 1 ;
+      sh:minCount 1 ;
+      sh:nodeKind sh:Literal ;
+    ] ;
+  sh:property [
+      sh:path ns1:gemeindeteil_name ;
+      sh:datatype xsd:string ;
+      sh:languageIn (
+          "en"
+        ) ;
+      sh:maxCount 1 ;
+      sh:minCount 1 ;
+      sh:nodeKind sh:Literal ;
+    ] ;
+  sh:property [
+      sh:path ns1:gemeindeteil_schluessel ;
+      sh:datatype xsd:string ;
+      sh:defaultValue "2322" ;
+      sh:maxCount 1 ;
+      sh:minCount 0 ;
+      sh:nodeKind sh:Literal ;
+    ] ;
+  sh:property [
+      sh:path ns1:hausnummer ;
+      sh:in (
+          1
+          5
+          7
+          8
+        ) ;
+      sh:maxCount 1 ;
+      sh:minCount 1 ;
+      sh:nodeKind sh:Literal ;
+    ] ;
+  sh:property [
+      sh:path ns1:hausnummer_zusatz ;
+      sh:datatype xsd:string ;
+      sh:maxCount 1 ;
+      sh:minCount 1 ;
+      sh:nodeKind sh:Literal ;
+    ] ;
+  sh:property [
+      sh:path ns1:lieferung ;
+      sh:datatype xsd:boolean ;
+      sh:maxCount 1 ;
+      sh:nodeKind sh:Literal ;
+    ] ;
+  sh:property [
+      sh:path ns1:oeffnungszeiten ;
+      sh:datatype xsd:string ;
+      sh:maxCount 1 ;
+      sh:minCount 1 ;
+      sh:nodeKind sh:Literal ;
+    ] ;
+  sh:property [
+      sh:path ns1:postleitzahl ;
+      sh:datatype xsd:string ;
+      sh:maxCount 1 ;
+      sh:minCount 1 ;
+      sh:nodeKind sh:Literal ;
+    ] ;
+  sh:property [
+      sh:path ns1:strasse_name ;
+      sh:datatype xsd:string ;
+      sh:maxCount 1 ;
+      sh:minCount 1 ;
+      sh:nodeKind sh:Literal ;
+    ] ;
+  sh:property [
+      sh:path ns1:strasse_schluessel ;
+      sh:datatype xsd:string ;
+      sh:maxCount 1 ;
+      sh:minCount 1 ;
+      sh:nodeKind sh:Literal ;
+    ] ;
+  sh:property [
+      sh:path ns1:telefon_festnetz ;
+      sh:datatype xsd:string ;
+      sh:maxCount 1 ;
+      sh:minCount 1 ;
+      sh:nodeKind sh:Literal ;
+    ] ;
+  sh:property [
+      sh:path ns1:uuid ;
+      sh:datatype xsd:string ;
+      sh:maxCount 1 ;
+      sh:minCount 1 ;
+      sh:nodeKind sh:Literal ;
+    ] ;
+  sh:property [
+      sh:path ns1:website ;
+      sh:datatype xsd:string ;
+      sh:maxCount 1 ;
+      sh:minCount 1 ;
+      sh:nodeKind sh:Literal ;
+    ] ;
+  sh:property [
+      sh:path wgs:lat ;
+      sh:datatype xsd:double ;
+      sh:maxCount 1 ;
+      sh:minCount 1 ;
+      sh:nodeKind sh:Literal ;
+    ] ;
+  sh:property [
+      sh:path wgs:long ;
+      sh:datatype xsd:double ;
+      sh:maxCount 1 ;
+      sh:minCount 1 ;
+      sh:nodeKind sh:Literal ;
+    ] ;
+  sh:sparql [
+      rdf:type sh:SPARQLAskValidator ;
+      sh:ask """ASK {
+	?value <http://www.wirtschaftsinformatik.uni-rostock.de/emdfail> ?mail
+FILTER(strlen(?mail) > 15)
+}""" ;
+      sh:message "\"WURST\"" ;
+    ] ;
+.
+
+
+ns1:labelDoubled
+  rdf:type sh:NodeShape ;
+  sh:deactivated "true"^^xsd:boolean ;
+  sh:property [
+      sh:path [
+          sh:alternativePath (
+              ns1:hausnummer
+              wgs:lat
+            ) ;
+        ] ;
+      sh:maxCount 1 ;
+      sh:severity sh:Info ;
+    ] ;
+  sh:targetClass ns1:Apotheken ;
+.
+
+ns1:Liefer-undAbholservices_Gastronomie_
+  rdf:type owl:Class ;
+  rdf:type sh:NodeShape ;
+  dc:description "Dieser Datensatz umfasst die Standorte der Liefer- und Abholservices (Gastronomie) in der Hanse- und Universitätsstadt Rostock mit Informationen zu Adresse, Art, Bezeichnung, Barrierefreiheit, Öffnungszeiten und Kontaktdaten. Die Ressourcen werden in der Regel im folgenden Zeitabstand aktualisiert: 365 Tage" ;
+  rdfs:seeAlso <https://geo.sv.rostock.de/download/opendata/lieferservices/lieferservices.json> ;
+.
+
+ns1:nameLimit
+  rdf:type sh:NodeShape ;
+  sh:and (
+      ns1:NonBlank
+      tops:NodeShape_1
+    ) ;
+  sh:deactivated "true"^^xsd:boolean ;
+  sh:description "\"What a perfect shape\"" ;
+  sh:group ns1:group ;
+  sh:maxLength 4 ;
+  sh:name "\"Amazing Shape\"@de" ;
+  sh:order "2"^^xsd:decimal ;
+  sh:severity sh:Warning ;
+  sh:targetClass ns1:Apotheken ;
+  sh:targetObjectsOf rdfs:label ;
+.
+
+
+ns1:NonBlank
+  rdf:type sh:NodeShape ;
+  sh:group ns1:group ;
+  sh:property [
+      sh:path rdfs:subClassOf ;
+      sh:minCount 2 ;
+    ] ;
+  sh:targetSubjectsOf rdfs:seeAlso ;
+.
+
+
+ns1:TestClass
+  rdf:type owl:Class ;
+  rdf:type sh:NodeShape ;
+  rdfs:subClassOf owl:Thing ;
+.
