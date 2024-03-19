@@ -1,0 +1,1184 @@
+<?xml version="1.0"?>
+<rdf:RDF
+    xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+    xmlns:owl="http://www.w3.org/2002/07/owl#"
+    xmlns:sh="http://www.w3.org/ns/shacl#"
+    xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+    xmlns="http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#"
+    xmlns:dash="http://datashapes.org/dash#"
+    xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+  xml:base="http://www.ontologydesignpatterns.org/ont/dul/DUL.owl.shapes">
+  <owl:Ontology rdf:about="">
+    <owl:imports rdf:resource="http://www.ontologydesignpatterns.org/ont/dul/DUL.owl"/>
+    <owl:imports rdf:resource="http://datashapes.org/dash"/>
+  </owl:Ontology>
+  <sh:NodeShape rdf:about="http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#SocialObjectAttribute">
+    <sh:property>
+      <sh:PropertyShape rdf:about="http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#SocialObjectAttribute-isRegionFor">
+        <sh:path rdf:resource="http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#isRegionFor"/>
+        <sh:class>
+          <sh:NodeShape rdf:about="http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#SocialObject">
+            <sh:property>
+              <sh:PropertyShape rdf:about="http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#SocialObject-isExpressedBy">
+                <sh:path rdf:resource="http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#isExpressedBy"/>
+                <sh:minCount rdf:datatype="http://www.w3.org/2001/XMLSchema#integer"
+                >1</sh:minCount>
+                <sh:class>
+                  <sh:NodeShape rdf:about="http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#InformationObject">
+                    <sh:property>
+                      <sh:PropertyShape rdf:about="http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#InformationObject-isRealizedBy">
+                        <sh:path rdf:resource="http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#isRealizedBy"/>
+                        <sh:class>
+                          <sh:NodeShape rdf:about="http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#InformationRealization">
+                            <sh:property>
+                              <sh:PropertyShape rdf:about="http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#InformationRealization-realizes">
+                                <sh:path rdf:resource="http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#realizes"/>
+                                <sh:minCount rdf:datatype="http://www.w3.org/2001/XMLSchema#integer"
+                                >1</sh:minCount>
+                                <sh:class rdf:resource="http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#InformationObject"/>
+                              </sh:PropertyShape>
+                            </sh:property>
+                            <sh:property>
+                              <sh:PropertyShape rdf:about="http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#InformationRealization-concretelyExpresses">
+                                <sh:path rdf:resource="http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#concretelyExpresses"/>
+                                <sh:class rdf:resource="http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#SocialObject"/>
+                              </sh:PropertyShape>
+                            </sh:property>
+                            <sh:property>
+                              <sh:PropertyShape rdf:about="http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#InformationRealization-realizesInformationAbout">
+                                <sh:path rdf:resource="http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#realizesInformationAbout"/>
+                                <sh:class>
+                                  <sh:NodeShape rdf:about="http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#Entity">
+                                    <sh:property>
+                                      <sh:PropertyShape rdf:about="http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#Entity-farFrom">
+                                        <sh:path rdf:resource="http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#farFrom"/>
+                                        <sh:class rdf:resource="http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#Entity"/>
+                                      </sh:PropertyShape>
+                                    </sh:property>
+                                    <sh:property>
+                                      <sh:PropertyShape rdf:about="http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#Entity-directlyPrecedes">
+                                        <sh:path rdf:resource="http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#directlyPrecedes"/>
+                                        <sh:class rdf:resource="http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#Entity"/>
+                                      </sh:PropertyShape>
+                                    </sh:property>
+                                    <sh:property>
+                                      <sh:PropertyShape rdf:about="http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#Entity-isReferenceOfInformationRealizedBy">
+                                        <sh:path rdf:resource="http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#isReferenceOfInformationRealizedBy"/>
+                                        <sh:class rdf:resource="http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#InformationRealization"/>
+                                      </sh:PropertyShape>
+                                    </sh:property>
+                                    <sh:property>
+                                      <sh:PropertyShape rdf:about="http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#Entity-associatedWith">
+                                        <sh:path rdf:resource="http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#associatedWith"/>
+                                        <sh:class rdf:resource="http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#Entity"/>
+                                      </sh:PropertyShape>
+                                    </sh:property>
+                                    <sh:property>
+                                      <sh:PropertyShape rdf:about="http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#Entity-isComponentOf">
+                                        <sh:path rdf:resource="http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#isComponentOf"/>
+                                        <sh:class rdf:resource="http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#Entity"/>
+                                      </sh:PropertyShape>
+                                    </sh:property>
+                                    <sh:property>
+                                      <sh:PropertyShape rdf:about="http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#Entity-isLocationOf">
+                                        <sh:path rdf:resource="http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#isLocationOf"/>
+                                        <sh:class rdf:resource="http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#Entity"/>
+                                      </sh:PropertyShape>
+                                    </sh:property>
+                                    <sh:property>
+                                      <sh:PropertyShape rdf:about="http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#Entity-follows">
+                                        <sh:path rdf:resource="http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#follows"/>
+                                        <sh:class rdf:resource="http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#Entity"/>
+                                      </sh:PropertyShape>
+                                    </sh:property>
+                                    <sh:property>
+                                      <sh:PropertyShape rdf:about="http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#Entity-isDescribedBy">
+                                        <sh:path rdf:resource="http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#isDescribedBy"/>
+                                        <sh:class>
+                                          <sh:NodeShape rdf:about="http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#Description">
+                                            <sh:property>
+                                              <sh:PropertyShape rdf:about="http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#Description-usesConcept">
+                                                <sh:path rdf:resource="http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#usesConcept"/>
+                                                <sh:class>
+                                                  <sh:NodeShape rdf:about="http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#Concept">
+                                                    <sh:property>
+                                                      <sh:PropertyShape rdf:about="http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#Concept-characterizes">
+                                                        <sh:path rdf:resource="http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#characterizes"/>
+                                                        <sh:class>
+                                                          <sh:NodeShape rdf:about="http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#Collection">
+                                                            <sh:property>
+                                                              <sh:PropertyShape rdf:about="http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#Collection-hasPart">
+    <sh:path rdf:resource="http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#hasPart"/>
+    <sh:class rdf:resource="http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#Collection"/>
+                                                              </sh:PropertyShape>
+                                                            </sh:property>
+                                                            <sh:property>
+                                                              <sh:PropertyShape rdf:about="http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#Collection-hasMember">
+    <sh:path rdf:resource="http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#hasMember"/>
+    <sh:class rdf:resource="http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#Entity"/>
+                                                              </sh:PropertyShape>
+                                                            </sh:property>
+                                                            <sh:property>
+                                                              <sh:PropertyShape rdf:about="http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#Collection-isCoveredBy">
+    <sh:path rdf:resource="http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#isCoveredBy"/>
+    <sh:class rdf:resource="http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#Concept"/>
+                                                              </sh:PropertyShape>
+                                                            </sh:property>
+                                                            <sh:property>
+                                                              <sh:PropertyShape rdf:about="http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#Collection-isCharacterizedBy">
+    <sh:path rdf:resource="http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#isCharacterizedBy"/>
+    <sh:class rdf:resource="http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#Concept"/>
+                                                              </sh:PropertyShape>
+                                                            </sh:property>
+                                                            <sh:property>
+                                                              <sh:PropertyShape rdf:about="http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#Collection-isUnifiedBy">
+    <sh:path rdf:resource="http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#isUnifiedBy"/>
+    <sh:class rdf:resource="http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#Description"/>
+                                                              </sh:PropertyShape>
+                                                            </sh:property>
+                                                          </sh:NodeShape>
+                                                        </sh:class>
+                                                      </sh:PropertyShape>
+                                                    </sh:property>
+                                                    <sh:property>
+                                                      <sh:PropertyShape rdf:about="http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#Concept-covers">
+                                                        <sh:path rdf:resource="http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#covers"/>
+                                                        <sh:class rdf:resource="http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#Collection"/>
+                                                      </sh:PropertyShape>
+                                                    </sh:property>
+                                                    <sh:property>
+                                                      <sh:PropertyShape rdf:about="http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#Concept-classifies">
+                                                        <sh:path rdf:resource="http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#classifies"/>
+                                                        <sh:class rdf:resource="http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#Entity"/>
+                                                      </sh:PropertyShape>
+                                                    </sh:property>
+                                                    <sh:property>
+                                                      <sh:PropertyShape rdf:about="http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#Concept-isDefinedIn">
+                                                        <sh:path rdf:resource="http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#isDefinedIn"/>
+                                                        <sh:minCount
+                                                         rdf:datatype=
+                                                        "http://www.w3.org/2001/XMLSchema#integer"
+                                                        >1</sh:minCount>
+                                                        <sh:class rdf:resource="http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#Description"/>
+                                                      </sh:PropertyShape>
+                                                    </sh:property>
+                                                    <sh:property>
+                                                      <sh:PropertyShape rdf:about="http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#Concept-isConceptUsedIn">
+                                                        <sh:path rdf:resource="http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#isConceptUsedIn"/>
+                                                        <sh:class rdf:resource="http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#Description"/>
+                                                      </sh:PropertyShape>
+                                                    </sh:property>
+                                                    <sh:property>
+                                                      <sh:PropertyShape rdf:about="http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#Concept-hasParameter">
+                                                        <sh:path rdf:resource="http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#hasParameter"/>
+                                                        <sh:class>
+                                                          <sh:NodeShape rdf:about="http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#Parameter">
+                                                            <sh:property>
+                                                              <sh:PropertyShape rdf:about="http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#Parameter-classifies">
+    <sh:path rdf:resource="http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#classifies"/>
+    <sh:class>
+      <sh:NodeShape rdf:about="http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#Region">
+        <sh:property>
+          <sh:PropertyShape rdf:about="http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#Region-hasConstituent">
+            <sh:path rdf:resource="http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#hasConstituent"/>
+            <sh:class rdf:resource="http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#Region"/>
+          </sh:PropertyShape>
+        </sh:property>
+        <sh:property>
+          <sh:PropertyShape rdf:about="http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#Region-precedes">
+            <sh:path rdf:resource="http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#precedes"/>
+            <sh:class rdf:resource="http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#Region"/>
+          </sh:PropertyShape>
+        </sh:property>
+        <sh:property>
+          <sh:PropertyShape rdf:about="http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#Region-overlaps">
+            <sh:path rdf:resource="http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#overlaps"/>
+            <sh:class rdf:resource="http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#Region"/>
+          </sh:PropertyShape>
+        </sh:property>
+        <sh:property>
+          <sh:PropertyShape rdf:about="http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#Region-hasPart">
+            <sh:path rdf:resource="http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#hasPart"/>
+            <sh:class rdf:resource="http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#Region"/>
+          </sh:PropertyShape>
+        </sh:property>
+        <sh:property>
+          <sh:PropertyShape rdf:about="http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#Region-isRegionFor">
+            <sh:path rdf:resource="http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#isRegionFor"/>
+            <sh:class rdf:resource="http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#Entity"/>
+          </sh:PropertyShape>
+        </sh:property>
+        <sh:property>
+          <sh:PropertyShape rdf:about="http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#Region-hasRegionDataValue">
+            <sh:path rdf:resource="http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#hasRegionDataValue"/>
+          </sh:PropertyShape>
+        </sh:property>
+        <sh:property>
+          <sh:PropertyShape rdf:about="http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#Region-isParametrizedBy">
+            <sh:path rdf:resource="http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#isParametrizedBy"/>
+            <sh:class rdf:resource="http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#Parameter"/>
+          </sh:PropertyShape>
+        </sh:property>
+      </sh:NodeShape>
+    </sh:class>                                               </sh:PropertyShape>
+                                                            </sh:property>
+                                                            <sh:property>
+                                                              <sh:PropertyShape rdf:about="http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#Parameter-hasPart">
+    <sh:path rdf:resource="http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#hasPart"/>
+    <sh:class rdf:resource="http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#Parameter"/>
+                                                              </sh:PropertyShape>
+                                                            </sh:property>
+                                                            <sh:property>
+                                                              <sh:PropertyShape rdf:about="http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#Parameter-isParameterFor">
+    <sh:path rdf:resource="http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#isParameterFor"/>
+    <sh:class rdf:resource="http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#Concept"/>
+                                                              </sh:PropertyShape>
+                                                            </sh:property>
+                                                            <sh:property>
+                                                              <sh:PropertyShape rdf:about="http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#Parameter-hasParameterDataValue">
+    <sh:path rdf:resource="http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#hasParameterDataValue"/>
+                                                              </sh:PropertyShape>
+                                                            </sh:property>
+                                                            <sh:property>
+                                                              <sh:PropertyShape rdf:about="http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#Parameter-isConstraintFor">
+    <sh:path rdf:resource="http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#isConstraintFor"/>
+    <sh:class rdf:resource="http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#Entity"/>
+                                                              </sh:PropertyShape>
+                                                            </sh:property>
+                                                            <sh:property>
+                                                              <sh:PropertyShape rdf:about="http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#Parameter-parametrizes">
+    <sh:path rdf:resource="http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#parametrizes"/>
+    <sh:class rdf:resource="http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#Region"/>
+                                                              </sh:PropertyShape>
+                                                            </sh:property>
+                                                          </sh:NodeShape>
+                                                        </sh:class>
+                                                      </sh:PropertyShape>
+                                                    </sh:property>
+                                                    <sh:property>
+                                                      <sh:PropertyShape rdf:about="http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#Concept-isConceptExpressedBy">
+                                                        <sh:path rdf:resource="http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#isConceptExpressedBy"/>
+                                                        <sh:class rdf:resource="http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#InformationObject"/>
+                                                      </sh:PropertyShape>
+                                                    </sh:property>
+                                                    <sh:property>
+                                                      <sh:PropertyShape rdf:about="http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#Concept-isSubordinatedTo">
+                                                        <sh:path rdf:resource="http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#isSubordinatedTo"/>
+                                                        <sh:class rdf:resource="http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#Concept"/>
+                                                      </sh:PropertyShape>
+                                                    </sh:property>
+                                                    <sh:property>
+                                                      <sh:PropertyShape rdf:about="http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#Concept-isSuperordinatedTo">
+                                                        <sh:path rdf:resource="http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#isSuperordinatedTo"/>
+                                                        <sh:class rdf:resource="http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#Concept"/>
+                                                      </sh:PropertyShape>
+                                                    </sh:property>
+                                                    <sh:property>
+                                                      <sh:PropertyShape rdf:about="http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#Concept-hasPart">
+                                                        <sh:path rdf:resource="http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#hasPart"/>
+                                                        <sh:class rdf:resource="http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#Concept"/>
+                                                      </sh:PropertyShape>
+                                                    </sh:property>
+                                                    <sh:property>
+                                                      <sh:PropertyShape rdf:about="http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#Concept-isRelatedToConcept">
+                                                        <sh:path rdf:resource="http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#isRelatedToConcept"/>
+                                                        <sh:class rdf:resource="http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#Concept"/>
+                                                      </sh:PropertyShape>
+                                                    </sh:property>
+                                                  </sh:NodeShape>
+                                                </sh:class>
+                                              </sh:PropertyShape>
+                                            </sh:property>
+                                            <sh:property>
+                                              <sh:PropertyShape rdf:about="http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#Description-isExpandedIn">
+                                                <sh:path rdf:resource="http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#isExpandedIn"/>
+                                                <sh:class rdf:resource="http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#Description"/>
+                                              </sh:PropertyShape>
+                                            </sh:property>
+                                            <sh:property>
+                                              <sh:PropertyShape rdf:about="http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#Description-isSatisfiedBy">
+                                                <sh:path rdf:resource="http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#isSatisfiedBy"/>
+                                                <sh:class>
+                                                  <sh:NodeShape rdf:about="http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#Situation">
+                                                    <sh:property>
+                                                      <sh:PropertyShape rdf:about="http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#Situation-hasPostcondition">
+                                                        <sh:path rdf:resource="http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#hasPostcondition"/>
+                                                      </sh:PropertyShape>
+                                                    </sh:property>
+                                                    <sh:property>
+                                                      <sh:PropertyShape rdf:about="http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#Situation-isSettingFor">
+                                                        <sh:path rdf:resource="http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#isSettingFor"/>
+                                                        <sh:class rdf:resource="http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#Entity"/>
+                                                      </sh:PropertyShape>
+                                                    </sh:property>
+                                                    <sh:property>
+                                                      <sh:PropertyShape rdf:about="http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#Situation-includesAgent">
+                                                        <sh:path rdf:resource="http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#includesAgent"/>
+                                                        <sh:class>
+                                                          <sh:NodeShape rdf:about="http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#Agent">
+                                                            <sh:property>
+                                                              <sh:PropertyShape rdf:about="http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#Agent-isAgentInvolvedIn">
+    <sh:path rdf:resource="http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#isAgentInvolvedIn"/>
+    <sh:class>
+      <sh:NodeShape rdf:about="http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#Event">
+        <sh:property>
+          <sh:PropertyShape rdf:about="http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#Event-hasPostcondition">
+            <sh:path rdf:resource="http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#hasPostcondition"/>
+          </sh:PropertyShape>
+        </sh:property>
+        <sh:property>
+          <sh:PropertyShape rdf:about="http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#Event-hasPrecondition">
+            <sh:path rdf:resource="http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#hasPrecondition"/>
+          </sh:PropertyShape>
+        </sh:property>
+        <sh:property>
+          <sh:PropertyShape rdf:about="http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#Event-hasConstituent">
+            <sh:path rdf:resource="http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#hasConstituent"/>
+            <sh:class rdf:resource="http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#Event"/>
+          </sh:PropertyShape>
+        </sh:property>
+        <sh:property>
+          <sh:PropertyShape rdf:about="http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#Event-isEventIncludedIn">
+            <sh:path rdf:resource="http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#isEventIncludedIn"/>
+            <sh:class rdf:resource="http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#Situation"/>
+          </sh:PropertyShape>
+        </sh:property>
+        <sh:property>
+          <sh:PropertyShape rdf:about="http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#Event-hasTimeInterval">
+            <sh:path rdf:resource="http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#hasTimeInterval"/>
+            <sh:minCount rdf:datatype="http://www.w3.org/2001/XMLSchema#integer"
+            >1</sh:minCount>
+            <sh:class>
+              <sh:NodeShape rdf:about="http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#TimeInterval">
+                <sh:property>
+                  <sh:PropertyShape rdf:about="http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#TimeInterval-isTimeIncludedIn">
+                    <sh:path rdf:resource="http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#isTimeIncludedIn"/>
+                    <sh:class rdf:resource="http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#Situation"/>
+                  </sh:PropertyShape>
+                </sh:property>
+                <sh:property>
+                  <sh:PropertyShape rdf:about="http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#TimeInterval-hasIntervalDate">
+                    <sh:path rdf:resource="http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#hasIntervalDate"/>
+                    <sh:datatype rdf:resource="http://www.w3.org/2001/XMLSchema#dateTime"/>
+                  </sh:PropertyShape>
+                </sh:property>
+                <sh:property>
+                  <sh:PropertyShape rdf:about="http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#TimeInterval-isTimeOfObservationOf">
+                    <sh:path rdf:resource="http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#isTimeOfObservationOf"/>
+                    <sh:class rdf:resource="http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#Entity"/>
+                  </sh:PropertyShape>
+                </sh:property>
+                <sh:property>
+                  <sh:PropertyShape rdf:about="http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#TimeInterval-isTimeIntervalOf">
+                    <sh:path rdf:resource="http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#isTimeIntervalOf"/>
+                    <sh:class rdf:resource="http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#Event"/>
+                  </sh:PropertyShape>
+                </sh:property>
+              </sh:NodeShape>
+            </sh:class>
+          </sh:PropertyShape>
+        </sh:property>
+        <sh:property>
+          <sh:PropertyShape rdf:about="http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#Event-involvesAgent">
+            <sh:path rdf:resource="http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#involvesAgent"/>
+            <sh:class rdf:resource="http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#Agent"/>
+          </sh:PropertyShape>
+        </sh:property>
+        <sh:property>
+          <sh:PropertyShape rdf:about="http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#Event-hasEventDate">
+            <sh:path rdf:resource="http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#hasEventDate"/>
+            <sh:datatype rdf:resource="http://www.w3.org/2001/XMLSchema#dateTime"/>
+          </sh:PropertyShape>
+        </sh:property>
+        <sh:property>
+          <sh:PropertyShape rdf:about="http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#Event-isPreconditionOf">
+            <sh:path rdf:resource="http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#isPreconditionOf"/>
+          </sh:PropertyShape>
+        </sh:property>
+        <sh:property>
+          <sh:PropertyShape rdf:about="http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#Event-hasPart">
+            <sh:path rdf:resource="http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#hasPart"/>
+            <sh:class rdf:resource="http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#Event"/>
+          </sh:PropertyShape>
+        </sh:property>
+        <sh:property>
+          <sh:PropertyShape rdf:about="http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#Event-isPostconditionOf">
+            <sh:path rdf:resource="http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#isPostconditionOf"/>
+          </sh:PropertyShape>
+        </sh:property>
+        <sh:property>
+          <sh:PropertyShape rdf:about="http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#Event-hasParticipant">
+            <sh:path rdf:resource="http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#hasParticipant"/>
+            <sh:minCount rdf:datatype="http://www.w3.org/2001/XMLSchema#integer"
+            >1</sh:minCount>
+            <sh:class>
+              <sh:NodeShape rdf:about="http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#Object">
+                <sh:property>
+                  <sh:PropertyShape rdf:about="http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#Object-hasLocation">
+                    <sh:path rdf:resource="http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#hasLocation"/>
+                    <sh:minCount rdf:datatype="http://www.w3.org/2001/XMLSchema#integer"
+                    >1</sh:minCount>
+                    <sh:class rdf:resource="http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#Entity"/>
+                  </sh:PropertyShape>
+                </sh:property>
+                <sh:property>
+                  <sh:PropertyShape rdf:about="http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#Object-isParticipantIn">
+                    <sh:path rdf:resource="http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#isParticipantIn"/>
+                    <sh:minCount rdf:datatype="http://www.w3.org/2001/XMLSchema#integer"
+                    >1</sh:minCount>
+                    <sh:class rdf:resource="http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#Event"/>
+                  </sh:PropertyShape>
+                </sh:property>
+                <sh:property>
+                  <sh:PropertyShape rdf:about="http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#Object-hasConstituent">
+                    <sh:path rdf:resource="http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#hasConstituent"/>
+                    <sh:class rdf:resource="http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#Object"/>
+                  </sh:PropertyShape>
+                </sh:property>
+                <sh:property>
+                  <sh:PropertyShape rdf:about="http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#Object-isClassifiedBy">
+                    <sh:path rdf:resource="http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#isClassifiedBy"/>
+                    <sh:class>
+                      <sh:NodeShape rdf:about="http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#Role">
+                        <sh:property>
+                          <sh:PropertyShape rdf:about="http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#Role-hasPart">
+                            <sh:path rdf:resource="http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#hasPart"/>
+                            <sh:class rdf:resource="http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#Role"/>
+                          </sh:PropertyShape>
+                        </sh:property>
+                        <sh:property>
+                          <sh:PropertyShape rdf:about="http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#Role-classifies">
+                            <sh:path rdf:resource="http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#classifies"/>
+                            <sh:class rdf:resource="http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#Object"/>
+                          </sh:PropertyShape>
+                        </sh:property>
+                        <sh:property>
+                          <sh:PropertyShape rdf:about="http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#Role-isRoleDefinedIn">
+                            <sh:path rdf:resource="http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#isRoleDefinedIn"/>
+                            <sh:class rdf:resource="http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#Description"/>
+                          </sh:PropertyShape>
+                        </sh:property>
+                        <sh:property>
+                          <sh:PropertyShape rdf:about="http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#Role-hasTask">
+                            <sh:path rdf:resource="http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#hasTask"/>
+                            <sh:class>
+                              <sh:NodeShape rdf:about="http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#Task">
+                                <sh:property>
+                                  <sh:PropertyShape rdf:about="http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#Task-isTaskDefinedIn">
+                                    <sh:path rdf:resource="http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#isTaskDefinedIn"/>
+                                    <sh:class rdf:resource="http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#Description"/>
+                                  </sh:PropertyShape>
+                                </sh:property>
+                                <sh:property>
+                                  <sh:PropertyShape rdf:about="http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#Task-isExecutedIn">
+                                    <sh:path rdf:resource="http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#isExecutedIn"/>
+                                    <sh:class>
+                                      <sh:NodeShape rdf:about="http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#Action">
+                                        <sh:property>
+                                          <sh:PropertyShape rdf:about="http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#Action-hasParticipant">
+                                            <sh:path rdf:resource="http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#hasParticipant"/>
+                                            <sh:minCount rdf:datatype=
+                                            "http://www.w3.org/2001/XMLSchema#integer"
+                                            >1</sh:minCount>
+                                            <dash:hasValueWithClass rdf:resource="http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#Agent"/>
+                                            <sh:class rdf:resource="http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#Object"/>
+                                          </sh:PropertyShape>
+                                        </sh:property>
+                                        <sh:property>
+                                          <sh:PropertyShape rdf:about="http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#Action-executesTask">
+                                            <sh:path rdf:resource="http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#executesTask"/>
+                                            <sh:minCount rdf:datatype=
+                                            "http://www.w3.org/2001/XMLSchema#integer"
+                                            >1</sh:minCount>
+                                            <sh:class rdf:resource="http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#Task"/>
+                                          </sh:PropertyShape>
+                                        </sh:property>
+                                        <sh:property>
+                                          <sh:PropertyShape rdf:about="http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#Action-isActionIncludedIn">
+                                            <sh:path rdf:resource="http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#isActionIncludedIn"/>
+                                            <sh:class rdf:resource="http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#Situation"/>
+                                          </sh:PropertyShape>
+                                        </sh:property>
+                                      </sh:NodeShape>
+                                    </sh:class>
+                                  </sh:PropertyShape>
+                                </sh:property>
+                                <sh:property>
+                                  <sh:PropertyShape rdf:about="http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#Task-isTaskOf">
+                                    <sh:path rdf:resource="http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#isTaskOf"/>
+                                    <sh:class rdf:resource="http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#Role"/>
+                                  </sh:PropertyShape>
+                                </sh:property>
+                                <sh:property>
+                                  <sh:PropertyShape rdf:about="http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#Task-hasPart">
+                                    <sh:path rdf:resource="http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#hasPart"/>
+                                    <sh:class rdf:resource="http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#Task"/>
+                                  </sh:PropertyShape>
+                                </sh:property>
+                              </sh:NodeShape>
+                            </sh:class>
+                          </sh:PropertyShape>
+                        </sh:property>
+                        <sh:property>
+                          <sh:PropertyShape rdf:about="http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#Role-isRoleOf">
+                            <sh:path rdf:resource="http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#isRoleOf"/>
+                            <sh:class rdf:resource="http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#Object"/>
+                          </sh:PropertyShape>
+                        </sh:property>
+                      </sh:NodeShape>
+                    </sh:class>
+                  </sh:PropertyShape>
+                </sh:property>
+                <sh:property>
+                  <sh:PropertyShape rdf:about="http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#Object-hasPart">
+                    <sh:path rdf:resource="http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#hasPart"/>
+                    <sh:class rdf:resource="http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#Object"/>
+                  </sh:PropertyShape>
+                </sh:property>
+                <sh:property>
+                  <sh:PropertyShape rdf:about="http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#Object-hasRole">
+                    <sh:path rdf:resource="http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#hasRole"/>
+                    <sh:class rdf:resource="http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#Role"/>
+                  </sh:PropertyShape>
+                </sh:property>
+                <sh:property>
+                  <sh:PropertyShape rdf:about="http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#Object-coparticipatesWith">
+                    <sh:path rdf:resource="http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#coparticipatesWith"/>
+                    <sh:class rdf:resource="http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#Object"/>
+                  </sh:PropertyShape>
+                </sh:property>
+                <sh:property>
+                  <sh:PropertyShape rdf:about="http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#Object-isObjectIncludedIn">
+                    <sh:path rdf:resource="http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#isObjectIncludedIn"/>
+                    <sh:class rdf:resource="http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#Situation"/>
+                  </sh:PropertyShape>
+                </sh:property>
+              </sh:NodeShape>
+            </sh:class>
+          </sh:PropertyShape>
+        </sh:property>
+      </sh:NodeShape>
+    </sh:class>                                               </sh:PropertyShape>
+                                                            </sh:property>
+                                                            <sh:property>
+                                                              <sh:PropertyShape rdf:about="http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#Agent-isAgentIncludedIn">
+    <sh:path rdf:resource="http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#isAgentIncludedIn"/>
+    <sh:class rdf:resource="http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#Situation"/>
+                                                              </sh:PropertyShape>
+                                                            </sh:property>
+                                                            <sh:property>
+                                                              <sh:PropertyShape rdf:about="http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#Agent-conceptualizes">
+    <sh:path rdf:resource="http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#conceptualizes"/>
+    <sh:class rdf:resource="http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#SocialObject"/>
+                                                              </sh:PropertyShape>
+                                                            </sh:property>
+                                                            <sh:property>
+                                                              <sh:PropertyShape rdf:about="http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#Agent-actsFor">
+    <sh:path rdf:resource="http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#actsFor"/>
+    <sh:class>
+      <sh:NodeShape rdf:about="http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#SocialAgent">
+        <sh:property>
+          <sh:PropertyShape rdf:about="http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#SocialAgent-actsThrough">
+            <sh:path rdf:resource="http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#actsThrough"/>
+            <dash:hasValueWithClass rdf:resource="http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#PhysicalAgent"/>
+            <sh:minCount rdf:datatype="http://www.w3.org/2001/XMLSchema#integer"
+            >1</sh:minCount>
+            <sh:class rdf:resource="http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#Agent"/>
+          </sh:PropertyShape>
+        </sh:property>
+        <sh:property>
+          <sh:PropertyShape rdf:about="http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#SocialAgent-isIntroducedBy">
+            <sh:path rdf:resource="http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#isIntroducedBy"/>
+            <sh:class rdf:resource="http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#Description"/>
+          </sh:PropertyShape>
+        </sh:property>
+      </sh:NodeShape>
+    </sh:class>                                               </sh:PropertyShape>
+                                                            </sh:property>
+                                                          </sh:NodeShape>
+                                                        </sh:class>
+                                                      </sh:PropertyShape>
+                                                    </sh:property>
+                                                    <sh:property>
+                                                      <sh:PropertyShape rdf:about="http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#Situation-includesTime">
+                                                        <sh:path rdf:resource="http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#includesTime"/>
+                                                        <sh:class rdf:resource="http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#TimeInterval"/>
+                                                      </sh:PropertyShape>
+                                                    </sh:property>
+                                                    <sh:property>
+                                                      <sh:PropertyShape rdf:about="http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#Situation-isPostconditionOf">
+                                                        <sh:path rdf:resource="http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#isPostconditionOf"/>
+                                                      </sh:PropertyShape>
+                                                    </sh:property>
+                                                    <sh:property>
+                                                      <sh:PropertyShape rdf:about="http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#Situation-satisfies">
+                                                        <sh:path rdf:resource="http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#satisfies"/>
+                                                        <sh:minCount
+                                                         rdf:datatype=
+                                                        "http://www.w3.org/2001/XMLSchema#integer"
+                                                        >1</sh:minCount>
+                                                        <sh:class rdf:resource="http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#Description"/>
+                                                      </sh:PropertyShape>
+                                                    </sh:property>
+                                                    <sh:property>
+                                                      <sh:PropertyShape rdf:about="http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#Situation-isPreconditionOf">
+                                                        <sh:path rdf:resource="http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#isPreconditionOf"/>
+                                                      </sh:PropertyShape>
+                                                    </sh:property>
+                                                    <sh:property>
+                                                      <sh:PropertyShape rdf:about="http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#Situation-includesAction">
+                                                        <sh:path rdf:resource="http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#includesAction"/>
+                                                        <sh:class rdf:resource="http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#Action"/>
+                                                      </sh:PropertyShape>
+                                                    </sh:property>
+                                                    <sh:property>
+                                                      <sh:PropertyShape rdf:about="http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#Situation-includesEvent">
+                                                        <sh:path rdf:resource="http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#includesEvent"/>
+                                                        <sh:class rdf:resource="http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#Event"/>
+                                                      </sh:PropertyShape>
+                                                    </sh:property>
+                                                    <sh:property>
+                                                      <sh:PropertyShape rdf:about="http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#Situation-includesObject">
+                                                        <sh:path rdf:resource="http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#includesObject"/>
+                                                        <sh:class rdf:resource="http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#Object"/>
+                                                      </sh:PropertyShape>
+                                                    </sh:property>
+                                                    <sh:property>
+                                                      <sh:PropertyShape rdf:about="http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#Situation-hasPrecondition">
+                                                        <sh:path rdf:resource="http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#hasPrecondition"/>
+                                                      </sh:PropertyShape>
+                                                    </sh:property>
+                                                  </sh:NodeShape>
+                                                </sh:class>
+                                              </sh:PropertyShape>
+                                            </sh:property>
+                                            <sh:property>
+                                              <sh:PropertyShape rdf:about="http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#Description-describes">
+                                                <sh:path rdf:resource="http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#describes"/>
+                                                <sh:class rdf:resource="http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#Entity"/>
+                                              </sh:PropertyShape>
+                                            </sh:property>
+                                            <sh:property>
+                                              <sh:PropertyShape rdf:about="http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#Description-expands">
+                                                <sh:path rdf:resource="http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#expands"/>
+                                                <sh:class rdf:resource="http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#Description"/>
+                                              </sh:PropertyShape>
+                                            </sh:property>
+                                            <sh:property>
+                                              <sh:PropertyShape rdf:about="http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#Description-definesTask">
+                                                <sh:path rdf:resource="http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#definesTask"/>
+                                                <sh:class rdf:resource="http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#Task"/>
+                                              </sh:PropertyShape>
+                                            </sh:property>
+                                            <sh:property>
+                                              <sh:PropertyShape rdf:about="http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#Description-isRelatedToDescription">
+                                                <sh:path rdf:resource="http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#isRelatedToDescription"/>
+                                                <sh:class rdf:resource="http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#Description"/>
+                                              </sh:PropertyShape>
+                                            </sh:property>
+                                            <sh:property>
+                                              <sh:PropertyShape rdf:about="http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#Description-unifies">
+                                                <sh:path rdf:resource="http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#unifies"/>
+                                                <sh:class rdf:resource="http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#Collection"/>
+                                              </sh:PropertyShape>
+                                            </sh:property>
+                                            <sh:property>
+                                              <sh:PropertyShape rdf:about="http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#Description-introduces">
+                                                <sh:path rdf:resource="http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#introduces"/>
+                                                <sh:class rdf:resource="http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#SocialAgent"/>
+                                              </sh:PropertyShape>
+                                            </sh:property>
+                                            <sh:property>
+                                              <sh:PropertyShape rdf:about="http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#Description-definesRole">
+                                                <sh:path rdf:resource="http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#definesRole"/>
+                                                <sh:class rdf:resource="http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#Role"/>
+                                              </sh:PropertyShape>
+                                            </sh:property>
+                                            <sh:property>
+                                              <sh:PropertyShape rdf:about="http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#Description-defines">
+                                                <sh:path rdf:resource="http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#defines"/>
+                                                <sh:class rdf:resource="http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#Concept"/>
+                                              </sh:PropertyShape>
+                                            </sh:property>
+                                          </sh:NodeShape>
+                                        </sh:class>
+                                      </sh:PropertyShape>
+                                    </sh:property>
+                                    <sh:property>
+                                      <sh:PropertyShape rdf:about="http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#Entity-hasComponent">
+                                        <sh:path rdf:resource="http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#hasComponent"/>
+                                        <sh:class rdf:resource="http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#Entity"/>
+                                      </sh:PropertyShape>
+                                    </sh:property>
+                                    <sh:property>
+                                      <sh:PropertyShape rdf:about="http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#Entity-isReferenceOf">
+                                        <sh:path rdf:resource="http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#isReferenceOf"/>
+                                        <sh:class rdf:resource="http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#InformationObject"/>
+                                      </sh:PropertyShape>
+                                    </sh:property>
+                                    <sh:property>
+                                      <sh:PropertyShape rdf:about="http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#Entity-hasRegion">
+                                        <sh:path rdf:resource="http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#hasRegion"/>
+                                        <sh:class rdf:resource="http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#Region"/>
+                                      </sh:PropertyShape>
+                                    </sh:property>
+                                    <sh:property>
+                                      <sh:PropertyShape rdf:about="http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#Entity-hasCommonBoundary">
+                                        <sh:path rdf:resource="http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#hasCommonBoundary"/>
+                                        <sh:class rdf:resource="http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#Entity"/>
+                                      </sh:PropertyShape>
+                                    </sh:property>
+                                    <sh:property>
+                                      <sh:PropertyShape rdf:about="http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#Entity-isObservableAt">
+                                        <sh:path rdf:resource="http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#isObservableAt"/>
+                                        <sh:class rdf:resource="http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#TimeInterval"/>
+                                      </sh:PropertyShape>
+                                    </sh:property>
+                                    <sh:property>
+                                      <sh:PropertyShape rdf:about="http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#Entity-hasPart">
+                                        <sh:path rdf:resource="http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#hasPart"/>
+                                        <sh:class rdf:resource="http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#Entity"/>
+                                      </sh:PropertyShape>
+                                    </sh:property>
+                                    <sh:property>
+                                      <sh:PropertyShape rdf:about="http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#Entity-nearTo">
+                                        <sh:path rdf:resource="http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#nearTo"/>
+                                        <sh:class rdf:resource="http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#Entity"/>
+                                      </sh:PropertyShape>
+                                    </sh:property>
+                                    <sh:property>
+                                      <sh:PropertyShape rdf:about="http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#Entity-precedes">
+                                        <sh:path rdf:resource="http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#precedes"/>
+                                        <sh:class rdf:resource="http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#Entity"/>
+                                      </sh:PropertyShape>
+                                    </sh:property>
+                                    <sh:property>
+                                      <sh:PropertyShape rdf:about="http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#Entity-hasConstraint">
+                                        <sh:path rdf:resource="http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#hasConstraint"/>
+                                        <sh:class rdf:resource="http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#Parameter"/>
+                                      </sh:PropertyShape>
+                                    </sh:property>
+                                    <sh:property>
+                                      <sh:PropertyShape rdf:about="http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#Entity-isConstituentOf">
+                                        <sh:path rdf:resource="http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#isConstituentOf"/>
+                                        <sh:class rdf:resource="http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#Entity"/>
+                                      </sh:PropertyShape>
+                                    </sh:property>
+                                    <sh:property>
+                                      <sh:PropertyShape rdf:about="http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#Entity-directlyFollows">
+                                        <sh:path rdf:resource="http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#directlyFollows"/>
+                                        <sh:class rdf:resource="http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#Entity"/>
+                                      </sh:PropertyShape>
+                                    </sh:property>
+                                    <sh:property>
+                                      <sh:PropertyShape rdf:about="http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#Entity-hasLocation">
+                                        <sh:path rdf:resource="http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#hasLocation"/>
+                                        <sh:class rdf:resource="http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#Entity"/>
+                                      </sh:PropertyShape>
+                                    </sh:property>
+                                    <sh:property>
+                                      <sh:PropertyShape rdf:about="http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#Entity-hasDataValue">
+                                        <sh:path rdf:resource="http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#hasDataValue"/>
+                                      </sh:PropertyShape>
+                                    </sh:property>
+                                    <sh:property>
+                                      <sh:PropertyShape rdf:about="http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#Entity-isPartOf">
+                                        <sh:path rdf:resource="http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#isPartOf"/>
+                                        <sh:class rdf:resource="http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#Entity"/>
+                                      </sh:PropertyShape>
+                                    </sh:property>
+                                    <sh:property>
+                                      <sh:PropertyShape rdf:about="http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#Entity-isClassifiedBy">
+                                        <sh:path rdf:resource="http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#isClassifiedBy"/>
+                                        <sh:class rdf:resource="http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#Concept"/>
+                                      </sh:PropertyShape>
+                                    </sh:property>
+                                    <sh:property>
+                                      <sh:PropertyShape rdf:about="http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#Entity-hasSetting">
+                                        <sh:path rdf:resource="http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#hasSetting"/>
+                                        <sh:class rdf:resource="http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#Situation"/>
+                                      </sh:PropertyShape>
+                                    </sh:property>
+                                    <sh:property>
+                                      <sh:PropertyShape rdf:about="http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#Entity-hasQuality">
+                                        <sh:path rdf:resource="http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#hasQuality"/>
+                                        <sh:class>
+                                          <sh:NodeShape rdf:about="http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#Quality">
+                                            <sh:property>
+                                              <sh:PropertyShape rdf:about="http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#Quality-hasConstituent">
+                                                <sh:path rdf:resource="http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#hasConstituent"/>
+                                                <sh:class rdf:resource="http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#Quality"/>
+                                              </sh:PropertyShape>
+                                            </sh:property>
+                                            <sh:property>
+                                              <sh:PropertyShape rdf:about="http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#Quality-hasPart">
+                                                <sh:path rdf:resource="http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#hasPart"/>
+                                                <sh:class rdf:resource="http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#Quality"/>
+                                              </sh:PropertyShape>
+                                            </sh:property>
+                                            <sh:property>
+                                              <sh:PropertyShape rdf:about="http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#Quality-hasRegion">
+                                                <sh:path rdf:resource="http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#hasRegion"/>
+                                                <sh:minCount rdf:datatype=
+                                                "http://www.w3.org/2001/XMLSchema#integer"
+                                                >1</sh:minCount>
+                                                <sh:class rdf:resource="http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#Region"/>
+                                              </sh:PropertyShape>
+                                            </sh:property>
+                                            <sh:property>
+                                              <sh:PropertyShape rdf:about="http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#Quality-isQualityOf">
+                                                <sh:path rdf:resource="http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#isQualityOf"/>
+                                                <sh:class rdf:resource="http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#Entity"/>
+                                              </sh:PropertyShape>
+                                            </sh:property>
+                                          </sh:NodeShape>
+                                        </sh:class>
+                                      </sh:PropertyShape>
+                                    </sh:property>
+                                    <sh:property>
+                                      <sh:PropertyShape rdf:about="http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#Entity-hasConstituent">
+                                        <sh:path rdf:resource="http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#hasConstituent"/>
+                                        <sh:class rdf:resource="http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#Entity"/>
+                                      </sh:PropertyShape>
+                                    </sh:property>
+                                    <sh:property>
+                                      <sh:PropertyShape rdf:about="http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#Entity-sameSettingAs">
+                                        <sh:path rdf:resource="http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#sameSettingAs"/>
+                                        <sh:class rdf:resource="http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#Entity"/>
+                                      </sh:PropertyShape>
+                                    </sh:property>
+                                    <sh:property>
+                                      <sh:PropertyShape rdf:about="http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#Entity-isMemberOf">
+                                        <sh:path rdf:resource="http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#isMemberOf"/>
+                                        <sh:class rdf:resource="http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#Collection"/>
+                                      </sh:PropertyShape>
+                                    </sh:property>
+                                    <sh:property>
+                                      <sh:PropertyShape rdf:about="http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#Entity-overlaps">
+                                        <sh:path rdf:resource="http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#overlaps"/>
+                                        <sh:class rdf:resource="http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#Entity"/>
+                                      </sh:PropertyShape>
+                                    </sh:property>
+                                  </sh:NodeShape>
+                                </sh:class>
+                              </sh:PropertyShape>
+                            </sh:property>
+                            <rdfs:subClassOf>
+                              <sh:NodeShape rdf:about="http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#PhysicalObject">
+                                <sh:property>
+                                  <sh:PropertyShape rdf:about="http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#PhysicalObject-hasPart">
+                                    <sh:path rdf:resource="http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#hasPart"/>
+                                    <sh:class rdf:resource="http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#PhysicalObject"/>
+                                  </sh:PropertyShape>
+                                </sh:property>
+                              </sh:NodeShape>
+                            </rdfs:subClassOf>
+                            <rdfs:subClassOf rdf:resource="http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#Event"/>
+                          </sh:NodeShape>
+                        </sh:class>
+                      </sh:PropertyShape>
+                    </sh:property>
+                    <sh:property>
+                      <sh:PropertyShape rdf:about="http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#InformationObject-expressesConcept">
+                        <sh:path rdf:resource="http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#expressesConcept"/>
+                        <sh:class rdf:resource="http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#Concept"/>
+                      </sh:PropertyShape>
+                    </sh:property>
+                    <sh:property>
+                      <sh:PropertyShape rdf:about="http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#InformationObject-expresses">
+                        <sh:path rdf:resource="http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#expresses"/>
+                        <sh:class rdf:resource="http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#SocialObject"/>
+                      </sh:PropertyShape>
+                    </sh:property>
+                    <sh:property>
+                      <sh:PropertyShape rdf:about="http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#InformationObject-isAbout">
+                        <sh:path rdf:resource="http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#isAbout"/>
+                        <sh:class rdf:resource="http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#Entity"/>
+                      </sh:PropertyShape>
+                    </sh:property>
+                  </sh:NodeShape>
+                </sh:class>
+              </sh:PropertyShape>
+            </sh:property>
+            <sh:property>
+              <sh:PropertyShape rdf:about="http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#SocialObject-hasPart">
+                <sh:path rdf:resource="http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#hasPart"/>
+                <sh:class rdf:resource="http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#SocialObject"/>
+              </sh:PropertyShape>
+            </sh:property>
+            <sh:property>
+              <sh:PropertyShape rdf:about="http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#SocialObject-isConcretelyExpressedBy">
+                <sh:path rdf:resource="http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#isConcretelyExpressedBy"/>
+                <sh:class rdf:resource="http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#InformationRealization"/>
+              </sh:PropertyShape>
+            </sh:property>
+            <sh:property>
+              <sh:PropertyShape rdf:about="http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#SocialObject-specializes">
+                <sh:path rdf:resource="http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#specializes"/>
+                <sh:class rdf:resource="http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#SocialObject"/>
+              </sh:PropertyShape>
+            </sh:property>
+            <sh:property>
+              <sh:PropertyShape rdf:about="http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#SocialObject-isConceptualizedBy">
+                <sh:path rdf:resource="http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#isConceptualizedBy"/>
+                <sh:class rdf:resource="http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#Agent"/>
+              </sh:PropertyShape>
+            </sh:property>
+            <sh:property>
+              <sh:PropertyShape rdf:about="http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#SocialObject-isSpecializedBy">
+                <sh:path rdf:resource="http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#isSpecializedBy"/>
+                <sh:class rdf:resource="http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#SocialObject"/>
+              </sh:PropertyShape>
+            </sh:property>
+          </sh:NodeShape>
+        </sh:class>
+      </sh:PropertyShape>
+    </sh:property>
+  </sh:NodeShape>
+  <sh:NodeShape rdf:about="http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#Project">
+    <sh:property>
+      <sh:PropertyShape rdf:about="http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#Project-definesTask">
+        <sh:path rdf:resource="http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#definesTask"/>
+        <sh:minCount rdf:datatype="http://www.w3.org/2001/XMLSchema#integer"
+        >1</sh:minCount>
+        <sh:class rdf:resource="http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#Task"/>
+      </sh:PropertyShape>
+    </sh:property>
+    <sh:property>
+      <sh:PropertyShape rdf:about="http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#Project-definesRole">
+        <sh:path rdf:resource="http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#definesRole"/>
+        <sh:minCount rdf:datatype="http://www.w3.org/2001/XMLSchema#integer"
+        >1</sh:minCount>
+        <sh:class rdf:resource="http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#Role"/>
+      </sh:PropertyShape>
+    </sh:property>
+  </sh:NodeShape>
+  <sh:NodeShape rdf:about="http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#Collective">
+    <sh:property>
+      <sh:PropertyShape rdf:about="http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#Collective-hasMember">
+        <sh:path rdf:resource="http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#hasMember"/>
+        <sh:class rdf:resource="http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#Agent"/>
+      </sh:PropertyShape>
+    </sh:property>
+  </sh:NodeShape>
+  <sh:NodeShape rdf:about="http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#Place">
+    <sh:property>
+      <sh:PropertyShape rdf:about="http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#Place-isLocationOf">
+        <sh:path rdf:resource="http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#isLocationOf"/>
+        <sh:minCount rdf:datatype="http://www.w3.org/2001/XMLSchema#integer"
+        >1</sh:minCount>
+        <sh:class rdf:resource="http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#Entity"/>
+      </sh:PropertyShape>
+    </sh:property>
+  </sh:NodeShape>
+  <sh:NodeShape rdf:about="http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#CollectiveAgent">
+    <sh:property>
+      <sh:PropertyShape rdf:about="http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#CollectiveAgent-isIntroducedBy">
+        <sh:path rdf:resource="http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#isIntroducedBy"/>
+        <sh:minCount rdf:datatype="http://www.w3.org/2001/XMLSchema#integer"
+        >1</sh:minCount>
+        <sh:class rdf:resource="http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#Description"/>
+      </sh:PropertyShape>
+    </sh:property>
+    <sh:property>
+      <sh:PropertyShape rdf:about="http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#CollectiveAgent-actsThrough">
+        <sh:path rdf:resource="http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#actsThrough"/>
+        <sh:minCount rdf:datatype="http://www.w3.org/2001/XMLSchema#integer"
+        >1</sh:minCount>
+        <sh:class rdf:resource="http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#Agent"/>
+      </sh:PropertyShape>
+    </sh:property>
+  </sh:NodeShape>
+  <sh:NodeShape rdf:about="http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#Right">
+    <sh:property>
+      <sh:PropertyShape rdf:about="http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#Right-definesRole">
+        <sh:path rdf:resource="http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#definesRole"/>
+        <sh:minCount rdf:datatype="http://www.w3.org/2001/XMLSchema#integer"
+        >2</sh:minCount>
+        <sh:class rdf:resource="http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#Role"/>
+      </sh:PropertyShape>
+    </sh:property>
+    <sh:property>
+      <sh:PropertyShape rdf:about="http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#Right-definesTask">
+        <sh:path rdf:resource="http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#definesTask"/>
+        <sh:minCount rdf:datatype="http://www.w3.org/2001/XMLSchema#integer"
+        >1</sh:minCount>
+        <sh:class rdf:resource="http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#Task"/>
+      </sh:PropertyShape>
+    </sh:property>
+  </sh:NodeShape>
+  <sh:NodeShape rdf:about="http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#Group">
+    <sh:property>
+      <sh:PropertyShape rdf:about="http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#Group-isDescribedBy">
+        <sh:path rdf:resource="http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#isDescribedBy"/>
+        <dash:hasValueWithClass>
+          <sh:NodeShape rdf:about="http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#Plan">
+            <sh:property>
+              <sh:PropertyShape rdf:about="http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#Plan-hasComponent">
+                <sh:path rdf:resource="http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#hasComponent"/>
+                <dash:hasValueWithClass rdf:resource="http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#Goal"/>
+                <sh:minCount rdf:datatype="http://www.w3.org/2001/XMLSchema#integer"
+                >1</sh:minCount>
+                <sh:class rdf:resource="http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#Entity"/>
+              </sh:PropertyShape>
+            </sh:property>
+          </sh:NodeShape>
+        </dash:hasValueWithClass>
+        <sh:minCount rdf:datatype="http://www.w3.org/2001/XMLSchema#integer"
+        >1</sh:minCount>
+        <sh:class rdf:resource="http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#Description"/>
+      </sh:PropertyShape>
+    </sh:property>
+  </sh:NodeShape>
+  <sh:NodeShape rdf:about="http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#PhysicalAttribute">
+    <sh:property>
+      <sh:PropertyShape rdf:about="http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#PhysicalAttribute-isRegionFor">
+        <sh:path rdf:resource="http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#isRegionFor"/>
+        <sh:class rdf:resource="http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#PhysicalObject"/>
+      </sh:PropertyShape>
+    </sh:property>
+  </sh:NodeShape>
+  <sh:NodeShape rdf:about="http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#PhysicalArtifact">
+    <sh:property>
+      <sh:PropertyShape rdf:about="http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#PhysicalArtifact-isDescribedBy">
+        <sh:path rdf:resource="http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#isDescribedBy"/>
+        <dash:hasValueWithClass rdf:resource="http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#Plan"/>
+        <sh:minCount rdf:datatype="http://www.w3.org/2001/XMLSchema#integer"
+        >1</sh:minCount>
+        <sh:class rdf:resource="http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#Description"/>
+      </sh:PropertyShape>
+    </sh:property>
+  </sh:NodeShape>
+  <sh:NodeShape rdf:about="http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#UnitOfMeasure">
+    <sh:property>
+      <sh:PropertyShape rdf:about="http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#UnitOfMeasure-parametrizes">
+        <sh:path rdf:resource="http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#parametrizes"/>
+        <sh:minCount rdf:datatype="http://www.w3.org/2001/XMLSchema#integer"
+        >1</sh:minCount>
+        <sh:class rdf:resource="http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#Region"/>
+      </sh:PropertyShape>
+    </sh:property>
+  </sh:NodeShape>
+  <sh:NodeShape rdf:about="http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#Classification">
+    <sh:property>
+      <sh:PropertyShape rdf:about="http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#Classification-isSettingFor">
+        <sh:path rdf:resource="http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#isSettingFor"/>
+        <dash:hasValueWithClass rdf:resource="http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#TimeInterval"/>
+        <sh:minCount rdf:datatype="http://www.w3.org/2001/XMLSchema#integer"
+        >1</sh:minCount>
+        <dash:hasValueWithClass rdf:resource="http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#Concept"/>
+        <sh:class rdf:resource="http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#Entity"/>
+      </sh:PropertyShape>
+    </sh:property>
+  </sh:NodeShape>
+  <sh:NodeShape rdf:about="http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#EventType">
+    <sh:property>
+      <sh:PropertyShape rdf:about="http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#EventType-classifies">
+        <sh:path rdf:resource="http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#classifies"/>
+        <sh:class rdf:resource="http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#Event"/>
+      </sh:PropertyShape>
+    </sh:property>
+  </sh:NodeShape>
+  <sh:NodeShape rdf:about="http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#Workflow">
+    <sh:property>
+      <sh:PropertyShape rdf:about="http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#Workflow-definesRole">
+        <sh:path rdf:resource="http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#definesRole"/>
+        <sh:minCount rdf:datatype="http://www.w3.org/2001/XMLSchema#integer"
+        >1</sh:minCount>
+        <sh:class rdf:resource="http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#Role"/>
+      </sh:PropertyShape>
+    </sh:property>
+    <sh:property>
+      <sh:PropertyShape rdf:about="http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#Workflow-definesTask">
+        <sh:path rdf:resource="http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#definesTask"/>
+        <sh:minCount rdf:datatype="http://www.w3.org/2001/XMLSchema#integer"
+        >1</sh:minCount>
+        <sh:class rdf:resource="http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#Task"/>
+      </sh:PropertyShape>
+    </sh:property>
+  </sh:NodeShape>
+  <sh:NodeShape rdf:about="http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#SpatioTemporalRegion">
+    <sh:property>
+      <sh:PropertyShape rdf:about="http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#SpatioTemporalRegion-hasConstituent">
+        <sh:path rdf:resource="http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#hasConstituent"/>
+        <sh:minCount rdf:datatype="http://www.w3.org/2001/XMLSchema#integer"
+        >1</sh:minCount>
+        <dash:hasValueWithClass rdf:resource="http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#TimeInterval"/>
+        <dash:hasValueWithClass rdf:resource="http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#SpaceRegion"/>
+        <sh:class rdf:resource="http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#Entity"/>
+      </sh:PropertyShape>
+    </sh:property>
+  </sh:NodeShape>
+  <sh:NodeShape rdf:about="http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#DesignedArtifact">
+    <sh:property>
+      <sh:PropertyShape rdf:about="http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#DesignedArtifact-isDescribedBy">
+        <sh:path rdf:resource="http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#isDescribedBy"/>
+        <dash:hasValueWithClass rdf:resource="http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#Design"/>
+        <sh:minCount rdf:datatype="http://www.w3.org/2001/XMLSchema#integer"
+        >1</sh:minCount>
+        <sh:class rdf:resource="http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#Description"/>
+      </sh:PropertyShape>
+    </sh:property>
+  </sh:NodeShape>
+  <sh:NodeShape rdf:about="http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#Theory">
+    <sh:property>
+      <sh:PropertyShape rdf:about="http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#Theory-hasComponent">
+        <sh:path rdf:resource="http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#hasComponent"/>
+        <dash:hasValueWithClass rdf:resource="http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#Relation"/>
+        <sh:minCount rdf:datatype="http://www.w3.org/2001/XMLSchema#integer"
+        >1</sh:minCount>
+        <sh:class rdf:resource="http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#Entity"/>
+      </sh:PropertyShape>
+    </sh:property>
+  </sh:NodeShape>
+  <sh:NodeShape rdf:about="http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#SocialPerson">
+    <sh:property>
+      <sh:PropertyShape rdf:about="http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#SocialPerson-actsThrough">
+        <sh:path rdf:resource="http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#actsThrough"/>
+        <sh:minCount rdf:datatype="http://www.w3.org/2001/XMLSchema#integer"
+        >1</sh:minCount>
+        <sh:class rdf:resource="http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#Agent"/>
+        <sh:maxCount rdf:datatype="http://www.w3.org/2001/XMLSchema#integer"
+        >1</sh:maxCount>
+      </sh:PropertyShape>
+    </sh:property>
+  </sh:NodeShape>
+  <sh:NodeShape rdf:about="http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#Transition">
+    <sh:property>
+      <sh:PropertyShape rdf:about="http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#Transition-isSettingFor">
+        <sh:path rdf:resource="http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#isSettingFor"/>
+        <sh:minCount rdf:datatype="http://www.w3.org/2001/XMLSchema#integer"
+        >1</sh:minCount>
+        <dash:hasValueWithClass rdf:resource="http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#Situation"/>
+        <dash:hasValueWithClass rdf:resource="http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#Process"/>
+        <sh:class rdf:resource="http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#Entity"/>
+      </sh:PropertyShape>
+    </sh:property>
+    <sh:property>
+      <sh:PropertyShape rdf:about="http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#Transition-includesTime">
+        <sh:path rdf:resource="http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#includesTime"/>
+        <sh:minCount rdf:datatype="http://www.w3.org/2001/XMLSchema#integer"
+        >3</sh:minCount>
+        <sh:class rdf:resource="http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#TimeInterval"/>
+      </sh:PropertyShape>
+    </sh:property>
+    <sh:property>
+      <sh:PropertyShape rdf:about="http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#Transition-includesEvent">
+        <sh:path rdf:resource="http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#includesEvent"/>
+        <sh:minCount rdf:datatype="http://www.w3.org/2001/XMLSchema#integer"
+        >2</sh:minCount>
+        <sh:class rdf:resource="http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#Event"/>
+      </sh:PropertyShape>
+    </sh:property>
+    <sh:property>
+      <sh:PropertyShape rdf:about="http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#Transition-includesObject">
+        <sh:path rdf:resource="http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#includesObject"/>
+        <sh:minCount rdf:datatype="http://www.w3.org/2001/XMLSchema#integer"
+        >1</sh:minCount>
+        <sh:class rdf:resource="http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#Object"/>
+      </sh:PropertyShape>
+    </sh:property>
+  </sh:NodeShape>
+</rdf:RDF>
+
+<!-- Created with TopBraid -->
